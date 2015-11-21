@@ -145,7 +145,22 @@
                 }
 
                 &:hover {
-                    border-color: @color-primary;
+                    border-color: @palette-red;
+                }
+
+                .course .details .wrapper-course-details {
+                    .course-title a {
+                        color: @palette-red;
+                    }
+
+                    .wrapper-course-actions .course-actions .enter-course {
+                        background-color: @palette-red;
+                        border: none;
+
+                        &:hover {
+                            background-color: saturate(@palette-red, 20%);
+                        }
+                    }
                 }
 
                 &:last-child {
@@ -300,4 +315,7 @@
             }
         }
     }
+    .dashboard-search-bar {
+        margin-left: 1%;
+     }
 }

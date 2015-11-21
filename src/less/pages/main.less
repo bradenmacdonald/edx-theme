@@ -8,6 +8,7 @@ body,
         margin: 0;
         padding: 0;
         background: none;
+        background-color: @color-background;
         padding-bottom: @layout-bottom-spacing;
 
         @media (min-width: @screen-xs-max) {
@@ -130,12 +131,14 @@ body,
     @import 'courses.less';
     @import 'dashboard.less';
 
-    @import 'register.less';
-    @import 'login.less';
     @import 'password-reset.less';
     @import 'activation.less';
+
+    @import 'course/about.less';
 }
 
-body.view-incourse .content-wrapper {
-    @import 'course/main.less';
+body.view-incourse, body.discussion {
+    .content-wrapper {
+        @import 'course/main.less';
+    }
 }
